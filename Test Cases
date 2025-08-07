@@ -1,0 +1,105 @@
+TC01: Start Game Successfully (Positive)
+Objective:
+Verify the game starts correctly when the Start Game button is clicked.
+Steps:
+1. Open the game page.
+2. Click the "Start Game" button.
+Expected Result:
+• The game state changes from 'start' to 'playing'.
+• The circle appears and begins orbiting.
+• The score resets to 0.
+
+TC02: Successful Hit Increases Score (Positive)
+Objective:
+Verify that tapping when the circle is inside the hit zone increases the score by 1.
+Steps:
+1. Start the game.
+2. Tap/click when the circle is glowing in the hit zone.
+Expected Result:
+• Score increments by 1.
+• Game speed increases slightly.
+• Circle continues orbiting with increased speed.
+TC03: High Score Updates Correctly (Positive)
+Objective:
+Verify that the high score updates and persists when a new high score is achieved.
+Steps:
+1. Start the game.
+2. Score more points than the current high score by hitting circles in the hit zone.
+3. Refresh the page.
+Expected Result:
+• High score updates to the new value on screen.
+• High score persists after page refresh (stored in localStorage).
+
+TC04: Restart Game After Game Over (Positive)
+Objective:
+Verify that the game restarts correctly after game over.
+Steps:
+1. Play the game until a miss occurs (tap outside hit zone).
+2. Click the "Play Again" button on the game over screen.
+Expected Result:
+• The game resets to 'playing' state.
+• Score resets to 0.
+• Circle appears and starts orbiting at initial speed.
+
+TC05: Visual Hit Zone Feedback (Positive)
+Objective:
+Verify that the hit zone visually glows and the orbiting circle glows when inside the hit zone.
+Steps:
+1. Start the game.
+2. Observe the hit zone and orbiting circle during gameplay.
+Expected Result:
+• The hit zone has a pulsing glow effect.
+The orbiting circle glows and has a drop shadow when inside the hit zone.
+
+TC06: Tap Outside Hit Zone Causes Game Over (Negative)
+Objective:
+Verify that tapping when the circle is not inside the hit zone ends the game.
+Steps:
+1. Start the game.
+2. Tap/click when the circle is outside the hit zone.
+Expected Result:
+• Game state changes to 'gameOver'.
+• Final score is displayed.
+• Game loop stops.
+
+TC07: Tap During Start Screen Has No Effect (Negative)
+Objective:
+Verify that tapping on the game area while on the start screen does not start the game.
+Steps:
+1. Open the game page (start screen).
+2. Tap/click anywhere on the game area without clicking the "Start Game" button.
+Expected Result:
+• Game state remains 'start'.
+• No circles orbiting.
+• Score remains at 0.
+
+TC08: Play Again Button Disabled During Gameplay (Negative)
+Objective:
+Verify that the "Play Again" button is not clickable or visible during gameplay.
+Steps:
+1. Start the game.
+2. Attempt to click the "Play Again" button (should not be visible).
+Expected Result:
+• "Play Again" button is not present during gameplay.
+• No interruption to game loop.
+
+TC09: High Score Does Not Update When Score Is Lower (Negative) 
+Objective:
+Verify that the high score does not update when the current score is less than the saved high score.
+Steps:
+1. Achieve a high score.
+2. Restart the game and score less than the saved high score.
+3. End the game.
+Expected Result:
+• High score remains unchanged and persists.
+• Current score does not overwrite high score.
+
+TC10: Game Does Not Start if Animation Frame Fails (Negative)
+Objective:
+Verify that if the requestAnimationFrame fails or is cancelled unexpectedly, the game does not enter the playing state.
+Steps:
+1. Simulate failure or cancellation of requestAnimationFrame (e.g., by tampering with the code or browser).
+2. Attempt to start the game.
+Expected Result:
+• Game does not start or immediately transitions back to start/game over.
+• No circle movement visible.
