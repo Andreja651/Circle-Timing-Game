@@ -1,0 +1,31 @@
+Project: Reflex - Circle Timing Game
+Tester: Andreja Mihajlovski
+Date: 2025-07-30
+
+1. Objectives
+• Verify core gameplay functionality: start, play, score, and game over conditions.
+• Ensure UI elements (score, hit zone, game states) behave as expected.
+• Confirm local storage correctly tracks and updates high score.
+• Validate responsiveness and basic animations.
+
+2. Testing Scope
+• Functional tests on gameplay mechanics and UI feedback.
+• Edge cases like tapping outside the hit zone or rapid tapping.
+• Persistence of high score data across sessions.
+
+3. Summary of Tests
+Test Area                   Total Cases       Passed        Failed         Comments
+Game Start & Restart        2                 2             0              All start/restart flows work correctly.
+Gameplay & Scoring          3                 3             0              Score increments and speed increase work fine.
+Tap Handling (Positive)     3                 3             0              Correct hit detection and scoring.
+Tap Handling (Negative)     2                 1             1              One intermittent issue with miss tap detection (see bugs).
+UI & Animations             2                 2             0              Smooth animations and visuals.
+Data Persistence            2                 1             1              High score persistence mostly works; some issues on abrupt tab close.
+
+4. Overall Assessment
+The core gameplay and UI functionality are stable and meet the project requirements. Minor bugs affecting tap miss detection and high score persistence were identified and logged for fixing.
+
+5. Recommendations
+• Fix intermittent tap miss detection to ensure consistent game over triggers.
+• Improve localStorage handling to save high scores reliably on abrupt tab closure.
+• Test UI responsiveness on various devices to resolve minor layout issues.
