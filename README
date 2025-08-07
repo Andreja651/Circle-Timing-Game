@@ -1,0 +1,31 @@
+Reflex - Circle Timing Game
+A simple and fast-paced reaction game built with React and TailwindCSS. Click at the right moment when the rotating circle enters the target zone to score.
+
+Features
+- Clean, responsive UI
+- Fast visual feedback
+- Animated circle and hit zone
+- Scoring system based on precision
+
+Getting Started
+Install dependencies:
+bash
+npm install
+Run the development server:
+bash
+Copy
+Edit
+npm run dev
+Build for production:
+bash
+Copy
+Edit
+npm run build
+Tech Stack
+Vite + React 
+or https://lovable.dev/projects/3ef8b691-c84d-49fd-96a1-27a2a41b3a39?magic_link=mc_245b4406-4a0b-44e5-8708-99004e562672
+
+TailwindCSS
+TypeScript
+License
+MIT
