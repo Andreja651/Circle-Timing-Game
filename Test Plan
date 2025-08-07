@@ -1,0 +1,58 @@
+1. Objectives
+Verify core gameplay functionality: game start, play, scoring, and game over conditions.
+Ensure UI elements (score display, hit zone, game state screens) function correctly.
+Confirm local storage properly handles and updates high scores.
+Validate responsiveness and basic animation smoothness.
+
+2. Test Scope
+In Scope:
+Functional testing of gameplay mechanics and scoring.
+UI/UX behavior during different game states.
+Edge case handling (e.g., rapid or off-target taps).
+Local storage data persistence across sessions.
+
+Out of Scope:
+Server-side testing (no server communication involved).
+Deep performance profiling (e.g., memory leaks, FPS benchmarks).
+Cross-platform testing on mobile (for this phase).
+
+3. Test Items
+Game start and restart behavior
+Gameplay scoring logic and hit detection
+Game over triggers (miss tap detection)
+UI elements (score, animations, state changes)
+High score saving via localStorage
+Responsiveness on varying screen sizes
+
+4. Test Strategy
+Manual testing of game flows and edge cases
+Repeated test cycles on:
+Desktop: Chrome (latest), Firefox (latest)
+Exploratory testing for unexpected user behaviors
+Bug logging and regression checks
+
+5. Test Deliverables
+Test cases (executed and tracked)
+Bug reports (with reproduction steps)
+Test Summary Report
+Recommendations for release
+This Test Plan document
+
+6. Test Environment
+Desktop browsers:
+Google Chrome (vXX)
+Mozilla Firefox (vXX)
+Screen resolutions tested: 1366×768, 1920×1080
+Local storage enabled
+
+7. Exit Criteria
+All critical and major test cases pass
+No open high-severity defects
+Known minor issues are documented
+Final test summary is approved
+
+8. Risks & Mitigations
+Risk	Mitigation
+Tap miss detection bug affects game over logic	Logged; to be fixed in next sprint
+High score may not save on abrupt tab close	Add beforeunload event handling
+Limited device/browser coverage	Plan additional testing for mobile later
