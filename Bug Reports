@@ -1,0 +1,62 @@
+Bug Report 1
+ID: BR01
+Title: Game speed does not reset after restarting game
+Description: After ending a game and clicking "Play Again," the game speed remains faster than the initial speed instead of resetting to the base speed.
+Steps to Reproduce:
+1. Start the game and score a few points to increase speed.
+2. Miss a tap to end the game.
+3. Click "Play Again."
+Expected Result: Game speed resets to initial speed for a fresh start.
+Actual Result: Game speed continues from the previous game's increased speed.
+Severity: Medium
+Status: Open
+
+Bug Report 2
+ID: BR02
+Title: High score not saved when tab/window is closed immediately after scoring
+Description: If the player scores a new high score but immediately closes or refreshes the tab, the high score may not be saved to localStorage.
+Steps to Reproduce:
+1. Score a new high score.
+2. Immediately close or refresh the browser tab.
+3. Reload the page.
+Expected Result: The new high score is saved and displayed.
+Actual Result: The high score remains the previous one.
+Severity: Low
+Status: Open
+
+Bug Report 3
+ID: BR03
+Title: Clicking outside the hit zone during gameplay sometimes does not trigger game over
+Description: Occasionally, tapping outside the hit zone does not end the game and gameplay continues incorrectly.
+Steps to Reproduce:
+1. Start the game.
+2. Tap outside the hit zone multiple times quickly.
+3. Observe that sometimes the game does not end.
+Expected Result: Any tap outside the hit zone should immediately trigger game over.
+Actual Result: The game continues in some cases.
+Severity: High
+Status: Open
+
+Bug Report 4
+ID: BR04
+Title: Visual hit zone indicator flickers or disappears briefly on some devices
+Description: The glowing hit zone sometimes flickers or disappears intermittently on certain mobile browsers.
+Steps to Reproduce:
+1. Open the game on a mobile browser (e.g., Safari iOS).
+2. Observe the hit zone animation.
+Expected Result: The hit zone glows smoothly without flickering.
+Actual Result: Flickering or brief disappearance occurs.
+Severity: Medium
+Status: Open
+
+Bug Report 5
+ID: BR05
+Title: Score display overlaps with game area on small screen widths
+Description: On very narrow screens or small devices, the score display overlaps with the game area, causing visual clutter.
+Steps to Reproduce:
+1. Open the game on a device with a narrow viewport (e.g., mobile in portrait).
+2. Start the game and observe the score display.
+Expected Result: The score display stays separate and legible.
+Actual Result: Overlapping text and graphics cause poor readability.
+Severity: Low
+Status: Open
