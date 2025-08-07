@@ -1,0 +1,49 @@
+TS01: Starting the Game
+• User opens the game page.
+• User clicks the “Start Game” button.
+• The game initializes with one orbiting circle at initial speed and score resets to zero.
+• The UI changes from start screen to playing mode.
+
+TS02: Scoring by Hitting the Target Zone
+• While the game is in playing mode, the orbiting circle moves around the core.
+• User taps when the circle enters the glowing hit zone.
+• The score increments by one.
+• The game speed increases slightly, making the game progressively harder.
+• The updated score is displayed in real-time.
+
+TS03: Persisting and Updating High Score
+• The game loads previously saved high score from localStorage.
+• If the player achieves a score higher than the current high score, the high score updates on screen and in localStorage.
+• Upon page refresh, the high score is retained and displayed correctly.
+
+TS04: Game Over on Missed Tap
+• User taps outside the hit zone while the game is playing.
+• The game stops and transitions to the game over screen.
+• The final score and high score are shown.
+• Option to play again is presented.
+
+TS05: Restarting the Game After Game Over
+• On the game over screen, user clicks the “Play Again” button.
+• The game resets score, speed, and circle position.
+• The game switches back to playing mode and gameplay restarts.
+
+TS06: Visual Feedback of Hit Zone and Circle
+• The hit zone is visually distinct with a glowing pulsing effect.
+• When the circle enters the hit zone, it glows with a drop shadow.
+• These visual cues help the user time their taps.
+
+TS07: No Effect When Tapping on Start Screen
+• Tapping anywhere on the game area before clicking “Start Game” does not start the game or affect the score.
+• The UI remains on the start screen until the button is pressed.
+
+TS08: Play Again Button is Only Visible After Game Over
+• During gameplay, the “Play Again” button is hidden.
+• After game over, the button appears and allows restarting the game.
+
+TS09: High Score Does Not Decrease
+• When the user scores less than the current high score and ends the game, the high score remains unchanged.
+• The current session’s lower score does not overwrite the high score in storage or UI.
+
+TS10: Robustness Against Animation Frame Failures
+• If the animation loop fails or is cancelled unexpectedly, the game should not crash.
+• The game either stays on start screen or gracefully handles the failure without freezing.
